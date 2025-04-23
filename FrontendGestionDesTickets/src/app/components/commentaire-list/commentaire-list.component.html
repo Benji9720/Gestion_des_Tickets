@@ -1,0 +1,20 @@
+<div class="list-container">
+  <div class="commentaires-list">
+    <div class="commentaire-item" *ngFor="let commentaire of commentaires">
+      <div class="commentaire-header">
+        <span class="user">Par: {{ commentaire.user?.nom }}</span>
+        <span class="date">Le {{ commentaire.dateCreation | date:'dd/MM/yyyy HH:mm' }}</span>
+      </div>
+      <div class="ticket-info">
+        Ticket: {{ commentaire.ticket?.titre }}
+      </div>
+      <div class="commentaire-contenu">
+        {{ commentaire.commentaire }}
+      </div>
+      <hr>
+    </div>
+  </div>
+  <div class="action-buttons">
+    <a routerLink="/commentaires/new" class="btn btn-primary">Ajouter un Commentaire</a>
+  </div>
+</div>

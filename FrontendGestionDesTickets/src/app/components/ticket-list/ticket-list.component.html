@@ -1,0 +1,11 @@
+<div class="list-container">
+  <h2>Liste des Tickets</h2>
+  <ul class="item-list">
+    <li *ngFor="let ticket of tickets" class="list-item">
+      {{ ticket.titre }} - Statut: {{ ticket.statut }} - Priorité: {{ ticket.priorite }}
+    </li>
+  </ul>
+  <div class="action-buttons">
+    <a routerLink="/tickets/new" class="btn btn-primary">Ajouter un Ticket</a>
+  </div>
+</div>

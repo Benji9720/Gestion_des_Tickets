@@ -1,0 +1,21 @@
+<h2>Ajouter un Commentaire</h2>
+<form (ngSubmit)="onSubmit()">
+  <div>
+    <label>Contenu:</label>
+    <textarea [(ngModel)]="commentaire.commentaire" name="contenu" required></textarea>
+  </div>
+  <div>
+    <label>Ticket:</label>
+    <select [(ngModel)]="commentaire.ticket" name="ticket">
+      <option *ngFor="let ticket of tickets" [ngValue]="ticket">{{ ticket.titre }}</option>
+    </select>
+  </div>
+  <div>
+    <label>Utilisateur:</label>
+    <select [(ngModel)]="commentaire.user" name="user">
+      <option *ngFor="let user of users" [ngValue]="user">{{ user.nom }}</option>
+    </select>
+  </div>
+  <button type="submit">Créer</button>
+  <a routerLink="/commentaires">Annuler</a>
+</form>

@@ -1,0 +1,11 @@
+<h1>Gestion des Tickets</h1>
+<nav>
+  <a routerLink="/users" *ngIf="authService.isLoggedIn()">Utilisateurs</a>
+  <span *ngIf="authService.isLoggedIn()"> | </span>
+  <a routerLink="/tickets" *ngIf="authService.isLoggedIn()">Tickets</a>
+  <span *ngIf="authService.isLoggedIn()"> | </span>
+  <a routerLink="/commentaires" *ngIf="authService.isLoggedIn()">Commentaires</a>
+  <span *ngIf="authService.isLoggedIn()"> | </span>
+  <a href="#" (click)="authService.logout()" *ngIf="authService.isLoggedIn()">Déconnexion</a>
+</nav>
+<router-outlet></router-outlet>

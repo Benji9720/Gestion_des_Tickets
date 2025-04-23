@@ -1,0 +1,65 @@
+/* Center the list container */
+.list-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the heading */
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Style the list */
+.item-list {
+  list-style: none;
+  padding: 0;
+}
+
+/* Style each list item */
+.list-item {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 3px;
+  margin-bottom: 5px;
+  transition: background-color 0.3s;
+}
+
+/* Add hover effect for list items */
+.list-item:hover {
+  background-color: #f1f1f1;
+}
+
+/* Style the action buttons container */
+.action-buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Style the button */
+.btn {
+  display: inline-block;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+/* Primary button style */
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Hover effect for primary button */
+.btn-primary:hover {
+  background-color: #0056b3;
+}

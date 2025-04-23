@@ -1,0 +1,31 @@
+<h2>Ajouter un Ticket</h2>
+<form (ngSubmit)="onSubmit()">
+  <div>
+    <label>Titre:</label>
+    <input type="text" [(ngModel)]="ticket.titre" name="titre" required>
+  </div>
+  <div>
+    <label>Description:</label>
+    <textarea [(ngModel)]="ticket.description" name="description" required></textarea>
+  </div>
+  <div>
+    <label>Statut:</label>
+    <select [(ngModel)]="ticket.statut" name="statut">
+      <option *ngFor="let statut of statuts" [value]="statut">{{ statut }}</option>
+    </select>
+  </div>
+  <div>
+    <label>Priorité:</label>
+    <select [(ngModel)]="ticket.priorite" name="priorite">
+      <option *ngFor="let priorite of priorites" [value]="priorite">{{ priorite }}</option>
+    </select>
+  </div>
+  <div>
+    <label>Créateur:</label>
+    <select [(ngModel)]="ticket.createur" name="createur">
+      <option *ngFor="let user of users" [ngValue]="user">{{ user.nom }}</option>
+    </select>
+  </div>
+  <button type="submit">Créer</button>
+  <a routerLink="/tickets">Annuler</a>
+</form>
